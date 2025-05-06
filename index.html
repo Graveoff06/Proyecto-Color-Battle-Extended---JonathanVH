@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Battle Color Extended</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="instrucciones">
+        <h2>instrucciones</h2>
+        <p>
+            El objetivo de este juego es tener mas casiilas de tu color para ganar, la forma de hacerlo es selecionar las casillas para pintarlo o 
+            robar las casilals del rival, la forma de robar casillas depende del modo de juego, en el modo normal es rodeando la casiila que se quiera 
+            robar por lados contrarios (Arriba y abajo) o (Izquierda y derecha), y en el modo extremo tambien se pude robar por los laterales.
+        </p>
+    </div>
+    <main>
+        <h1>Tabla de colores</h1>
+
+        <div class="usuario1">
+            <h2 id="nombreUsuario1">Jugador 1</h2>
+            <label for="colorJugador1">Color:</label>
+            <input type="color" id="colorJugador1" value="#ff0000">
+            <div class="puntos">
+                <p>Puntos: <span id="puntosUser1">0</span></p>
+            </div>
+        </div>
+    
+        <div id="contenedor-tabla"></div>
+    
+        <div class="usuario2">
+            <h2 id="nombreUsuario2">Jugador 2</h2>
+            <label for="colorJugador2">Color:</label>
+            <input type="color" id="colorJugador2" value="#0000ff">
+            <div class="puntos">
+                <p>Puntos: <span id="puntosUser2">0</span></p>
+            </div>
+        </div>
+
+        <div class="partida">
+            <p>Turno: <span id="turno">1</span></p>
+            <p>Tiempo restante: <span id="tiempo">30</span>s</p>
+            <input type="button" value="Iniciar">
+            <input type="reset" value="Reiniciar">
+        </div>
+        <div class="iconos">
+            <i class="fa-solid fa-circle-info"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="mensaje" hidden>
+            <h2 id="mensaje-victoria"></h2>
+            <button id="reiniciar-mensaje">Jugar de nuevo</button>
+        </div>
+    </main>
+    <div class="configuración">
+        <div class="numero-usuarios">
+            <p>Nº Usuarios: 1/2</p>
+            <div class="usuario">
+                <label for="usuario1">Usuario1:</label>
+                <input value="" type="text" id="usuario1" maxlength="10">
+            </div>
+            <div class="usuario">
+                <label for="usuario2">Usuario2:</label>
+                <input value="" type="text" id="usuario2" maxlength="10">
+            </div>
+        </div>
+        <div class="opciones-sonido">
+            <div class="sonido">
+                <label for="sonido">FxSound:</label>
+                <input value="" type="checkbox" id="sonido">
+            </div>
+            <div class="musica">
+                <label for="musica">Music:</label>
+                <input value="" type="checkbox" id="musica">
+            </div>
+        </div>
+        <div class="modo-Juego">
+            <label>Modo Juego:</label>
+            <input type="image" src="./imagen/ModoNormal.png" alt="Normal" id="modoNormal">
+            <input type="image" src="./imagen/ModoExtremo.png" alt="Extremo" id="modoExtremo">
+        </div>
+        <div class="ia">
+            <label for="ia">Activar IA?</label>
+            <input type="checkbox" id="ia">
+        </div>
+        <div class="guardar-partida">
+            <label for="guardar">Guardar Partida:</label>
+            <input value="" type="checkbox" id="guardar">
+        </div>
+        <div class="tiempo-turno">
+            <label for="tiempo-config">Tiempo Turno (0-60s):</label>
+            <input value="30" type="number" step="10" min="0" max="60" id="tiempo-config">
+        </div>
+        <div class="tamaño-tablero">
+            <label for="lado">Tamaño Tablero:</label>
+            <input value="5" type="number"  step="1" min="5" max="10" id="lado">
+        </div>
+        <div class="color-tablero">
+            <label for="color">Color Tablero:</label>
+            <input value="" type="color" id="color">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--Jonathan Valladares Hernández-->
